@@ -170,7 +170,8 @@ function rememberMyFilms() {
     }
 
 }
-// rememberMyFilms();
+
+rememberMyFilms();
 
 function detectPersonalLevel() {
 
@@ -185,7 +186,7 @@ function detectPersonalLevel() {
     }
 }
 
-// detectPersonalLevel();
+detectPersonalLevel();
 
 function showMyDB(hidden) {
     if (!hidden) {
