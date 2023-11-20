@@ -178,7 +178,7 @@ function detectPersonalLevel() {
     if (personalMuviesDB.count < 10) {
         console.log('Просмотрено довольно мало фильмов');
     } else if (personalMuviesDB.count <= 10 && personalMuviesDB.count < 30) {
-        console.log('Вы классический зритель');
+        console.log('Вы классический зритель!');
     } else if (personalMuviesDB.count >= 30) {
         console.log('Вы киноман');
     } else {
