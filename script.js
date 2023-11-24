@@ -267,13 +267,81 @@
 
 // getTimeFromMinutes(180)
 
-function leanJS(lang, callback) {
-    console.log(`I learn ${lang}`);
-    callback();
+// function leanJS(lang, callback) {
+//     console.log(`I learn ${lang}`);
+//     callback();
+// }
+
+// function done() {
+//     console.log('I completed this task');
+// }
+
+// leanJS('JS', done);
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     heigth: 1024,
+//     color: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+
+//     makeTest: function () {
+//         console.log('Test');
+//     }
+// };
+// options.makeTest();
+
+// const { border, bg } = options.color;
+// console.log(border);
+
+// console.log(Object.keys(options).length);
+
+
+// console.log(options.name);
+
+// delete options.name;
+
+// console.log(options); 
+
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Property ${i} has value ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Property ${key} has value ${options[key]}`);
+//         counter++;
+//     }
+// }
+// console.log(counter);
+
+const arr = [1, 52, 13, 5, 78, 11];
+arr.sort(compareNumm);
+console.log(arr);
+
+function compareNumm(a, b) {
+    return a - b;
 }
 
-function done() {
-    console.log('I completed this task');
-}
+// arr.forEach(function (item, i, arr) {
+//     console.log(`${i}: ${item}, incide messive ${arr} `);
+// })
 
-leanJS('JS', done);
+// arr.pop();
+// arr.push(10);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+// for (let value of arr){
+//     console.log(value);
+// }
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join("; "));
