@@ -327,21 +327,138 @@ function compareNumm(a, b) {
     return a - b;
 }
 
-// arr.forEach(function (item, i, arr) {
-//     console.log(`${i}: ${item}, incide messive ${arr} `);
-// })
+arr.forEach(function (item, i, arr) {
+    console.log(`${i}: ${item}, incide messive ${arr} `);
+})
 
-// arr.pop();
-// arr.push(10);
+arr.pop();
+arr.push(10);
 
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+for (let value of arr) {
+    console.log(value);
+}
+
+const str = prompt("", "");
+const products = str.split(", ");
+products.sort();
+console.log(products.join("; "));
+
+
+
+let a = 5;
+b = a;
+
+b = b + 5;
+
+console.log(b);
+console.log(a);
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+const copy = obj; // Ссылка
+copy.a = 10;
+
+console.log(copy);
+console.log(obj);
+
+function copy(mainObj) {
+    let objCopy = {};
+
+
+    for (let key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+newNumbers.c.x = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+    d: 17,
+    e: 25
+};
+
+console.log(Object.assign(numbers, add));
+
+const video = ['youtube', 'vimeo', 'rutube'],
+    blogs = ['wordpress', 'livejournal', 'blogers'],
+    internet = [...video, ...blogs, 'facebook', 'insta'];
+
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+
+log(...num);
+
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
+    },
+    showAgeAndLangs: function (plan) {
+
+        console.log(`Мне ${this.age} и я владею языками: ${this.skills.languages.join(' ').toUpperCase()}`);
+
+
+    }
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+// function showExperience(plan) {
+//     let {exp} = plan.skills;
+//     return exp;
 // }
-// for (let value of arr){
-//     console.log(value);
-// }
 
-// const str = prompt("", "");
-// const products = str.split(", ");
-// products.sort();
-// console.log(products.join("; "));
+
+// showExperience(personalPlanPeter);
+
+function showProgrammingLangs(plan) {
+    let { programmingLangs } = plan.skills;
+
+    const arrayLang = [];
+
+    for (let key in programmingLangs) {
+        arrayLang.push(`Язык ${key} изучен на ${programmingLangs[key]}\n`)
+        // objCopy[key] = programmingLangs[key];
+    }
+
+    return arrayLang.join('');
+
+}
+showProgrammingLangs(personalPlanPeter);
